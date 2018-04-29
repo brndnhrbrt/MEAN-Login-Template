@@ -23,7 +23,6 @@ export class AppComponent implements OnInit {
   }
 
   getLoginStatus() {
-    console.log(this.tokenService.isLoggedIn())
     if(this.tokenService.isLoggedIn()) {
       this.isLoggedIn = true;
     } else {

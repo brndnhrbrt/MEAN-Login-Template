@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { DatePipe } from '@angular/common';
 
+import { AppComponent } from '../app.component';
+
 import { UserService } from '../user.service';
 import { TokenService } from '../token.service';
 
@@ -19,7 +21,8 @@ export class DashboardComponent implements OnInit {
 
   constructor(
     private userService: UserService,
-    private tokenService: TokenService
+    private tokenService: TokenService,
+    private appComponent: AppComponent
   ) { }
 
   ngOnInit() {

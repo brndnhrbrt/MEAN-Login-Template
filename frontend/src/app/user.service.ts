@@ -53,6 +53,7 @@ export class UserService {
           return true;
         } else {
           const message: Message = { success: resp.success, message: resp.message }; 
+          this.tokenService.clearToken();
           return message;
         }
       }),

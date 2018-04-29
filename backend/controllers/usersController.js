@@ -22,7 +22,7 @@ exports.register = function(req, res) {
 
 exports.authenticate = function(req, res) {
     if(checkParams([ req.body.username, req.body.password ])) {
-        User.findOneAndUpdate({ 'username': req.body.username }).select('username password').exec(function(error, user) {
+        User.findOne({ 'username': req.body.username }, 'username password', function(error, user) {
             if(error) { sendResponse(res, false, error, 'invalid username or password') }
             else if(!user) { sendResponse(res, false, null, 'invalid username or password') }
             else if(!user.comparePassword(req.body.password)) { sendResponse(res, false, null, 'invalid username or password') }

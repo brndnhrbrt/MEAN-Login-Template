@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { AppComponent } from '../app.component';
 
 import { UserService } from '../user.service';
+import { TokenService } from '../token.service';
 
 import { LoginUser } from '../user';
 import { Message } from '../message';
@@ -21,7 +22,8 @@ export class LoginComponent implements OnInit {
   constructor(
     private userService: UserService,
     private router: Router,
-    private appComponent: AppComponent
+    private appComponent: AppComponent,
+    private tokenService: TokenService
   ) { }
 
   ngOnInit() {
@@ -33,8 +35,10 @@ export class LoginComponent implements OnInit {
       const message: Message = { success: resp.success, message: resp.message };
       this.message = message;
       if(resp.success) {
-        this.router.navigate(['dash']);
         this.appComponent.isLoggedIn = true;
+        this.router.navigate(['dash']);
+      } else {
+        this.tokenService.clearToken();
       }
     });
   }

@@ -37,8 +37,8 @@ export class RegisterComponent implements OnInit {
           const message: Message = { success: resp.success, message: resp.message };
           this.message = message;
           if(resp.success) {
-            this.router.navigate(['dash']);
             this.appComponent.isLoggedIn = true;
+            this.router.navigate(['dash']);
           }
         });
       } else {
