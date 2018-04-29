@@ -1,0 +1,19 @@
+.jumbotron {
+    margin: 5%;
+}
+
+body {
+    background-color: #F8F8F6;
+}
+
+.jumbotron {
+    text-align: left;
+}
+
+.container {
+    text-align: center !important;
+}
+
+.btn-small {
+    max-width: 150px;
+}

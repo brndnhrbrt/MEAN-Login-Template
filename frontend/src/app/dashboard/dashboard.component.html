@@ -1,0 +1,11 @@
+<div *ngIf="user; else not_logged_in">
+  <div class="jumbotron">
+    <label><h3>{{ user.username }}</h3></label>
+    <br>
+    <small>User created on {{ user.dateCreated | date:'fullDate' }}</small>
+  </div>
+</div>
+
+<ng-template #not_logged_in>
+    Please login
+</ng-template>
