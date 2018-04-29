@@ -1,18 +1,9 @@
 .jumbotron {
-    margin: 5%;
-    text-align: left;
-    max-width: 750px;
-    min-height: 600px;
+  background-color: #EEEEEE !important;
 }
 
 body {
-    background-color: #F8F8F6;
-}
-
-.container {
-    /* text-align: center; */
-}
-
-.btn-small {
-    max-width: 150px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #EEEEEE !important;
 }

@@ -1,11 +1,23 @@
 <div *ngIf="user; else not_logged_in">
-  <div class="jumbotron">
-    <label><h3>{{ user.username }}</h3></label>
-    <br>
-    <small>User created on {{ user.dateCreated | date:'fullDate' }}</small>
+  <div class="container">
+    <div class="jumbotron">
+      <label>
+        <h3>{{ user.username }}</h3>
+      </label>
+      <br>
+      <small>User created on {{ user.dateCreated | date:'fullDate' }}</small>
+    </div>
   </div>
 </div>
 
 <ng-template #not_logged_in>
-    Please login
+  <div class="container">
+    <div class="jumbotron">
+      <label>
+        <h3>Please
+          <a routerLink="/login">Sign in</a>
+        </h3>
+      </label>
+    </div>
+  </div>
 </ng-template>
