@@ -7,33 +7,33 @@ A simple MEAN stack template with user registration and authentication.
 `cd ./backend`
 
 
-### install dependencies
+#### install dependencies
 
 ```
 npm install
 ```
 
-### create a config.js
+#### create a config.js
 
 ```
 follow config.example.js template
 ```
 
-### run in dev mode
+#### run in dev mode
 
 ```
 npm run devstart
 ```
 
-### run
+#### run
 
 ```
 npm start
 ```
 
-### using the api
+#### using the api
 
-#### register user
+##### register user
 
 requires username password and repeatPassword
 
@@ -41,7 +41,7 @@ requires username password and repeatPassword
 /users/register
 ```
 
-#### login user
+##### login user
 
 requires username and password.
 returns token
@@ -50,7 +50,7 @@ returns token
 /users/login
 ```
 
-#### user info
+##### user info
 
 requires token
 
