@@ -1,0 +1,17 @@
+label, h5 {
+    display: inline;
+}
+label {
+    margin-right: 25px;
+}
+.links {
+    margin-bottom: 10px;
+}
+small {
+    width: 100%;
+    bottom: 50px;
+    position: absolute;
+}
+.jumbotron {
+    position: relative;
+}
